@@ -1,17 +1,12 @@
-let wrapper;
-let typewriter;
-let buttonContainer;
-let pauseBtn;
-
 show();
 function show() {
     let html = '';
     main.innerHTML = html;
 
-    wrapper = createElem("div", main, null, "class", "wrapper");
-    typewriter = createElem("div", wrapper, null, "class", "typewriter");
-    buttonContainer = createElem("div", typewriter, null, "class", "button-container");
-    pauseBtn = document.createElement("div");
+    const wrapper = createElem("div", main, null, "class", "wrapper");
+    const typewriter = createElem("div", wrapper, null, "class", "typewriter");
+    const buttonContainer = createElem("div", typewriter, null, "class", "button-container");
+    const pauseBtn = document.createElement("div");
     pauseBtn.setAttribute("class", "pause-btn");
 
     for (let i = 0; i < sounds.names.length; i++) {
@@ -25,7 +20,6 @@ function show() {
             playSound(sound, buttonContainer, pauseBtn);
         }
     };
-
 }
 
 /**
